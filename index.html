@@ -4,34 +4,56 @@
     <meta charset="UTF-8" />
     <meta id="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Orbitron"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Countdown Timer</title>
   </head>
-  <body onload="countDownTimer()">
+  <body>
     <div class="container">
-      <div id="date"></div>
-      <h2>Set Countdown</h2>
-      <form id="setTime">
-        <div>
-          <input type="number" id="hours" min="0" max="24" placeholder="HH" />
+      <h1 class="title">Set Countdown</h1>
+      <form id="setTime" class="timer">
+        <div class="form-control">
+          <input
+            type="number"
+            id="hours"
+            min="0"
+            max="23"
+            placeholder="HH"
+            required
+          />
+          <input
+            type="number"
+            id="mins"
+            min="0"
+            max="60"
+            placeholder="MM"
+            required
+          />
+          <input
+            type="number"
+            id="seconds"
+            min="0"
+            max="60"
+            placeholder="SS"
+            required
+          />
         </div>
-
-        <div>
-          <input type="number" id="mins" min="0" max="24" placeholder="MM" />
-        </div>
-
-        <div>
-          <input type="number" id="seconds" min="0" max="24" placeholder="SS" />
-        </div>
-
-        <div>
+        <div class="btn">
           <input type="submit" value="Start Countdown" />
         </div>
       </form>
 
-      <div id="showCountdown"></div>
+      <div id="showCountdown" class="showCountdown"></div>
     </div>
-
+    <iframe
+      src="sound/silence.mp3"
+      frameborder="0"
+      style="display:none"
+      allow="autoplay"
+    ></iframe>
     <script src="main.js"></script>
   </body>
 </html>
